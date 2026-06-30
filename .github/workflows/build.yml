@@ -2,6 +2,9 @@ name: Build
 
 on: push
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,3 +17,20 @@ jobs:
 
       - name: Compile OS
         run: make
+
+      - name: Get commit number
+        id: buildnum
+        run: echo "num=$(git rev-list --count HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Get commit message
+        id: commit
+        run: echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          name: Build ${{ steps.buildnum.outputs.num }}
+          tag_name: build-${{ steps.buildnum.outputs.num }}
+          prerelease: true
+          body: ${{ steps.commit.outputs.msg }}
+          files: clippyos.iso

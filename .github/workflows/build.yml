@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Install system dependencies
-        run: sudo apt update && sudo apt install -y make nasm
+        run: sudo apt update && sudo apt install -y make nasm xorriso
 
       - name: Compile OS
         run: make

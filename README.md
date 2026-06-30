@@ -9,10 +9,18 @@ A 32-bit operating system based around the windows assistant Clippy
 
 ## How to run
 
+### Using a pre-compiled ISO
+
+1. Visit the [releases](https://github.com/XDPXI/ClippyOS/releases)
+2. Download the ISO from a release
+
+### Building from source
+
 > Required Dependencies:
-> - Make
-> - Qemu
-> - Nasm
+> - make
+> - qemu
+> - nasm
+> - xorriso
 
 1. Checkout the git repository
 ```

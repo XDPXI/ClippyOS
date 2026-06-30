@@ -1,6 +1,6 @@
-mov ah, 0x0e
-mov al, 'H'
-int 0x10
+mov ah, 0x0e ; tty mode
+mov al, 'H' ; set
+int 0x10 ; print
 mov al, 'e'
 int 0x10
 mov al, 'l'
@@ -23,7 +23,7 @@ int 0x10
 mov al, '!'
 int 0x10
 
-jmp $
+jmp $ ; inf loop
 
-times 510-($-$$) db 0
+times 510-($-$$) db 0 ; magic
 dw 0xaa55

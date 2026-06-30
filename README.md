@@ -10,9 +10,10 @@ A 32-bit operating system based around the windows assistant Clippy
 ## How to run
 
 > Required Dependencies:
-> - Make
-> - Qemu
-> - Nasm
+> - make
+> - qemu
+> - nasm
+> - xorriso
 
 1. Checkout the git repository
 ```

@@ -36,3 +36,12 @@ make
 ```
 make run
 ```
+
+---
+
+## Credits
+
+- https://kmmoore.github.io/articles/writing-a-uefi-application/
+- https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+- https://wiki.osdev.org/Expanded_Main_Page
+- https://github.com/cfenollosa/os-tutorial
